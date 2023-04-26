@@ -295,10 +295,6 @@ class Board(object):
 
     def possible_fortifications(self, player_id):
         """
-        Assemble a list of all possible fortifications for the players.
-        
-        Args:
-            player_id (int): ID of the attacking player.
 
         Returns:
             list: List of Moves.
