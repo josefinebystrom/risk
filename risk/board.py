@@ -75,8 +75,6 @@ class Board(object):
         return ret
     
     def cost_of_attack_path(self, path):
-        '''
-        '''
         if not self.is_valid_attack_path:
             return False
 
@@ -86,8 +84,6 @@ class Board(object):
         return armies
     
     def shortest_path(self, source, target):
-        '''
-        '''
         dictionary = {}
         dictionary[source] = [source]
         queue = deque()
@@ -111,6 +107,7 @@ class Board(object):
 
 
     def can_fortify(self, source, target):
+        dictionary = {}
         dictionary[source] = [source]
         queue = deque()
         queue.append(source)
@@ -132,6 +129,7 @@ class Board(object):
         return False
 
     def cheapest_attack_path(self, source, target):
+        pid = self.owner(source)
         if pid == self.owner(target):
             return None
 
